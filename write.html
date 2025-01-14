@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<title>Writing</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="css3baby.css">
+<link rel="stylesheet" title="…" type="text/css" href="baby.css">
+<script src="button.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Comic Sans MS">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Allerta Stencil">
+<link rel="alternate" href="https://aws.amazon.com/cn/campaigns/freecenter-select-region-ps/" hreflang="zh-cn">
+</head>
+<body>
+<div style="margin:2em 2em 0">
+<a href=dragonhome.html><button id="main" class="butbac" style="background-color:rgb(0,255,255); color:red">Home</button></a>
+   <script>anxs("main", "主页", "Home") </script>
+
+<a href=highlight.html><button id="hili" class="butbac" style="background-color:rgb(0,0,255); color:yellow">Highlight</button></a>
+   <script>anxs("hili", "嗨 嗨", "Highlight") </script>
+
+<a href=piaoliuping.html><button id="piao" class="butbac" style="background-color:rgb(255,0,0); color:lime">Drifting Bottle</button></a>
+   <script>anxs("piao", "漂流瓶", "Drifting Bottle") </script>
+
+<a href=favorite.html><button id="myfa" class="butbac" style="background-color:rgb(0,255,0); color:red">Favorite</button></a>
+   <script>anxs("myfa", "学习", "Favorite") </script>
+
+<a href=trust.html><button id="trust" class="butbac" style="background-color:rgb(255,255,0); color:blue">Trust Files</button></a>
+   <script>anxs("trust", "可靠的资料", "Trust Files") </script>
+</div>
+
+
+<p class="button-container">
+<button id="speak" class="buttonpa" style="background-color:red;color:lime ">speak</button>
+  <script>anxs("speak", "朗读", "speak") </script>
+</p>
+<h2>
+<textarea id="text-input" autofocus placeholder="你打完我朗读Enter then speak..." class=center rows=20 cols=60 style="color:blue;text-align:center;font:bold oblique 60px 仿宋"></textarea>
+  <script>
+     //type and click speak
+     const textArea = document.getElementById('text-input');
+     const speakButton = document.getElementById('speak');        
+     speakButton.addEventListener('click', () => {
+     const text = textArea.value;
+     if (text) {const utterance = new SpeechSynthesisUtterance(text);
+     window.speechSynthesis.speak(utterance)}})
+  </script>
+</body>
+
+</html>

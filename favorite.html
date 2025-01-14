@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+<title>My Favorite</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="css3baby.css">
+<link rel="stylesheet" title="…" type="text/css" href="baby.css">
+<script src="button.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Comic Sans MS">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Allerta Stencil">
+<link rel="alternate" href="https://aws.amazon.com/cn/campaigns/freecenter-select-region-ps/" hreflang="zh-cn">
+</head>
+<body class="favback">
+<div style="margin:2em 2em 12em">
+<a href=dragonhome.html><button id="main" class="butbac" style="background-color:rgb(0,255,0); color:red">Home</button></a>
+   <script>anxs("main", "主页", "Home") </script>
+
+<a href=highlight.html><button id="hili" class="butbac" style="background-color:rgb(0,0,255); color:yellow">Highlight</button></a>
+   <script>anxs("hili", "嗨 嗨", "Highlight") </script>
+
+<a href=piaoliuping.html><button id="piao" class="butbac" style="background-color:rgb(255,0,0); color:lime">Drifting Bottle</button></a>
+   <script>anxs("piao", "漂流瓶", "Drifting Bottle") </script>
+
+<a href=trust.html><button id="trust" class="butbac" style="background-color:rgb(255,255,0); color:blue">Trust Files</button></a>
+   <script>anxs("trust", "可靠的资料", "Trust Files") </script>
+</div>
+
+<div class="button-container">
+   <div class="buttonfam">
+<button id="write" class="buttonpa" style="background-color:yellow;color:brown" onclick="tgdrbt('writetype')">Writing</button>
+   <script>anxs("write", "写字作文", "Writing") </script>
+   <span id="writetype" class="buttondrop0">
+   <a href="type.html"><button class="buttondrop" style="background-color:lime">Type</button></a>
+   <a href="write.html"><button class="buttondrop" style="background-color:aqua">Write</button></a>
+   </span>
+   </div>
+   
+   <div class="buttonfam">
+<button id="draw" class="buttonpa" style="background-color:red; color:aqua" onclick="tgdrbt('drawcolor')">Drawing</button>
+   <script>anxs("draw", "绘画", "Drawing") </script>
+     <span id="drawcolor" class="buttondrop0">
+     <a href=bbdraw/HTMLcolor.html><button class="buttondrop" style="background-color:aqua">Color</button></a>
+     <button class="buttondrop" style="background-color:lime" onclick="invokePydraw()">Python</button>
+     </span>
+   <!-- first cmd run F:\>python DRAGONBABY/bbdraw/serpy.py -->
+<script>
+    function invokePydraw() {const socket = new WebSocket('ws://localhost:8765');
+       socket.onopen = function(event) {
+       console.log('WebSocket connection opened');
+       socket.send('Invoke Python file')}}
+</script>
+   </div>
+<button id="music"class="buttonpa" style="background-color:lime; color:red" type="button" onclick="alert('Hello music World!')">Music</button>
+   <script>anxs("music", "音乐", "Music") </script>
+<button id="play" class="buttonpa" style="background-color:blue; color:yellow" type="button" onclick="alert('Hello olying World!')">Playing</button>
+   <script>anxs("play", "运动娱乐", "Playing") </script>
+<button id="read"class="buttonpa" style="background-color:rgb(255 0 255); color:rgb(200 255 200)" type="button" onclick="alert('Hello resding World!')">Reading</button>
+   <script>anxs("read", "阅读", "Reading") </script>
+<button id="scince" class="buttonpa"  style="background-color:rgb(0 255 255); color:rgb(255 0 0)" type="button" onclick="alert('Hello science World!')">Science</button>
+   <script>anxs("scince", "科学", "Scince") </script>
+<a href=myfavo.html><button id="myfav" class="buttonpa" style="background-color:rgb(255 255 255); color:rgb(0 0 0)">Favorite</button></a>
+   <script>anxs("myfav", "我的经典", "Favorite") </script>
+</div>
+</body>
+</html>
+

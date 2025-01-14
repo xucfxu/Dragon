@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<title>Typing</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="baby.css">
+<script src="button.js"></script>
+<link rel="alternate" href="https://aws.amazon.com/cn/campaigns/freecenter-select-region-ps/" hreflang="zh-cn">
+</head>
+
+<body>
+<div style="margin:2em 2em 0">
+<a href=dragonhome.html><button id="main" class="butbac" style="background-color:rgb(0,255,255); color:red">Home</button></a>
+   <script>anxs("main", "主页", "Home") </script>
+
+<a href=highlight.html><button id="hili" class="butbac" style="background-color:rgb(0,0,255); color:yellow">Highlight</button></a>
+   <script>anxs("hili", "嗨 嗨", "Highlight") </script>
+
+<a href=piaoliuping.html><button id="piao" class="butbac" style="background-color:rgb(255,0,0); color:lime">Drifting Bottle</button></a>
+   <script>anxs("piao", "漂流瓶", "Drifting Bottle") </script>
+
+<a href=favorite.html><button id="myfa" class="butbac" style="background-color:rgb(0,255,0); color:red">Favorite</button></a>
+   <script>anxs("myfa", "学习", "Favorite") </script>
+
+<a href=trust.html><button id="trust" class="butbac" style="background-color:rgb(255,255,0); color:blue">Trust Files</button></a>
+   <script>anxs("trust", "可靠的资料", "Trust Files") </script>
+</div>
+
+
+<p class="button-container">
+<button id="speak" class="buttonpa" style="background-color:red;color:lime">speak</button>
+  <script>anxs("speak", "朗读", "speak") </script>
+</p>
+
+<h2 id="t3" style="color:teal;font-style:normal">Type and Speak</h2>
+  <script>anxs("t3", "你打我读", "Type and Speak") </script>
+<h2><textarea id="text-input" autofocus placeholder="你打字我朗读 随打随读 Enter and speak synchronously..." class=center rows=20 cols=60 style="color:blue;text-align:center;font:bold oblique 60px 仿宋"></textarea></h2>
+<script>
+  const synth = window.speechSynthesis;
+  const textarea = document.querySelector('textarea');
+  textarea.addEventListener('input', () => {synth.cancel();   // Cancel any previous speech
+  const utterance = new SpeechSynthesisUtterance(textarea.value);   // Create a new SpeechSynthesisUtterance with the updated textarea value
+  synth.speak(utterance)})    // Speak the new utterance
+
+  //speak textArea
+  const speaktextArea = document.getElementById('text-input');
+  const speakButton = document.getElementById('speak');        
+  speakButton.addEventListener('click', () => {const text = speaktextArea.value;
+  if (text) {const utterance = new SpeechSynthesisUtterance(text);
+  synth.speak(utterance)}})
+</script>
+
+</body>
+</html>
+
+  
+
